@@ -1,43 +1,47 @@
+/*module.exports = {
+    env: {
+        browser: true,
+        es2021: true,
+        node: true,
+    },
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
+    parserOptions: {
+        "ecmaVersion": 2020,
+        "ecmaFeatures": {
+            jsx: true,
+            parser: '@babel/eslint-parser',
+            ecmaVersion: 6,
+            ecmaFeatures: {
+                experimentalObjectRestSpread: true,
+            },
+        },
+        ecmaVersion: 13,
+        sourceType: 'module',
+    },
+    plugins: ['react',],
+    rules: {},
+};
+*/
 module.exports = {
     env: {
         browser: true,
-        jest: true,
-        es6: true,
+        es2021: true,
+        node: true,
     },
-    plugins: ["import"],
-    extends: ["plugin:prettier/recommended"],
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
     parserOptions: {
         ecmaVersion: 2020,
-        sourceType: "module",
         ecmaFeatures: {
             jsx: true,
+            parser: '@babel/eslint-parser',
+            ecmaVersion: 6,
+            ecmaFeatures: {
+                experimentalObjectRestSpread: true,
+            },
         },
+        ecmaVersion: 13,
+        sourceType: 'module',
     },
-    rules: {
-        "no-console": "warn",
-        "no-eval": "error",
-        "import/first": "error",
-    },
+    plugins: ['react'],
+    rules: {},
 };
-/* env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: [
-    'plugin:react/recommended',
-    'standard',
-  ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 13,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-  ],
-  rules: {
-  },
-};
- */

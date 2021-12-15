@@ -1,6 +1,7 @@
-import React from "react";
-import "./styles.css";
-import { PostCard } from "../PostCard";
+import React from 'react';
+import './styles.css';
+import { PostCard } from '../PostCard';
+import P from 'prop-types';
 
 export var Posts = function ({ posts }) {
     return (
@@ -17,4 +18,12 @@ export var Posts = function ({ posts }) {
             ))}
         </div>
     );
+};
+
+Posts.defaultProps = {
+    posts: [],
+};
+
+Posts.propTypes = {
+    posts: P.array,
 };

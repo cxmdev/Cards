@@ -1,0 +1,13 @@
+ssh-keygen -t rsa -f "C:\Users\User\Desktop\DEVELOPER\CURSOREACT\projetoreact\.ssh\github" -C 'mrcx.dev@gmail.com'
+eval "$(ssh-agent -s)"
+ ssh-add "C:\Users\User\Desktop\DEVELOPER\CURSOREACT\projetoreact\.ssh\github"
+cd "C:\Users\User\Desktop\DEVELOPER\CURSOREACT\projetoreact"
+git init
+git config --global user.name "cxmdev"
+git config --global user.email "mrcx.dev@gmail.com"
+ git remote add origin https://github.com/cxmdev/Cards.git
+git add .
+git commit -m 'Initial'
+ git push origin master
+git status
+git push origin master -u

@@ -11,8 +11,9 @@
     </div>
     )
 } */
-import React from "react";
-import "./styles.css";
+import P from 'prop-types';
+import React from 'react';
+import './styles.css';
 
 export var PostCard = function ({ cover, id, title, body }) {
     return (
@@ -20,7 +21,7 @@ export var PostCard = function ({ cover, id, title, body }) {
             <img src={cover} alt={title} />
             <div className="post-content">
                 <h2>
-                    {" "}
+                    {' '}
                     {title}
                     {id}
                 </h2>
@@ -28,4 +29,11 @@ export var PostCard = function ({ cover, id, title, body }) {
             </div>
         </div>
     );
+};
+
+PostCard.propTypes = {
+    title: P.string.isRequired,
+    cover: P.string.isRequired,
+    id: P.string.isRequired,
+    body: P.string.isRequired,
 };

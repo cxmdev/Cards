@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Button } from "../../components/Button";
-import { Posts } from "../../components/Posts";
-import { TextInput } from "../../components/TextInput";
-import { loadPosts } from "../../utils/load-posts";
-import "./styles.css";
+import React, { Component } from 'react';
+import { Button } from '../../components/Button';
+import { Posts } from '../../components/Posts';
+import { TextInput } from '../../components/TextInput';
+import { loadPosts } from '../../utils/load-posts';
+import './styles.css';
 
 export class Home extends Component {
     state = {
@@ -11,7 +11,7 @@ export class Home extends Component {
         allPosts: [],
         page: 0,
         postsPerPage: 2,
-        searchValue: "",
+        searchValue: '',
     };
 
     async componentDidMount() {
@@ -47,7 +47,7 @@ export class Home extends Component {
 
         const filteredPosts = searchValue
             ? allPosts.filter((post) =>
-                  post.title.toLowerCase().includes(searchValue.toLowerCase())
+                  post.title.toLowerCase().includes(searchValue.toLowerCase()),
               )
             : posts;
 
